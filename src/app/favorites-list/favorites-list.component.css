@@ -1,0 +1,29 @@
+.favorites-list {
+  max-width: 600px;
+  margin: 0 auto;
+
+}
+
+.favorite-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-item h3 {
+  margin: 0;
+  color: #333;
+}
+
+.favorite-item .plot {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.favorite-item .plot:hover {
+  color: #0056b3;
+}
+

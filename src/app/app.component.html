@@ -1,0 +1,26 @@
+<div class="header">
+  <button class="favorites-button" (click)="toggleFavorites()">&#10084;</button> <!-- Ícone de coração -->
+  <h1>Encontre seu Filme</h1>
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="movieTitle"
+      placeholder="Digite o nome de um filme..."
+    />
+    <button (click)="fetchMovie()">Buscar</button>
+  </div>
+</div>
+
+
+<div class="content">
+  <!-- Exibe os detalhes do filme -->
+  <div class="movie-details-container" *ngIf="showMovieDetails">
+    <app-movie-details [movie]="movieData"></app-movie-details>
+    <button class="like-button" (click)="addToFavorites(movieData)">&#10084;</button> <!-- Ícone de coração -->
+  </div>
+
+  <!-- Exibe a lista de favoritos -->
+  <div class="favorites-list-container" *ngIf="showingFavorites">
+    <app-favorites-list [favorites]="favorites" (removeFavorite)="removeFavorite($event)"></app-favorites-list>
+  </div>
+</div>

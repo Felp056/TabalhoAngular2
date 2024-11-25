@@ -1,0 +1,14 @@
+<div class="favorites-list">
+  <h2>Meus Favoritos</h2>
+  <div *ngFor="let movie of favorites" class="favorite-item">
+    <h3>{{ movie.title }}</h3>
+    <p><strong>Gênero:</strong> {{ movie.genre }}</p>
+    <p>
+      <strong>Sinopse:</strong>
+      <span class="plot" (click)="movie.showPlot = !movie.showPlot">
+        {{ movie.showPlot ? movie.plot : (movie.plot | slice: 0:100) + '...' }}
+      </span>
+    </p>
+    <button (click)="onRemove(movie)">X</button>
+  </div>
+</div>

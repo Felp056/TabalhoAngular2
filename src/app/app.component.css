@@ -1,0 +1,122 @@
+/* Cabeçalho */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Botão de favoritos no canto superior esquerdo */
+.favorites-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #007bff; /* Azul */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.favorites-button:hover {
+  background-color: #0056b3; /* Azul escuro */
+}
+
+/* Estilo centralizado para o título */
+.header h1 {
+  font-size: 1.8rem;
+  margin: 0 0 10px; /* Espaço abaixo do título */
+  color: #ffd700;
+  text-transform: uppercase;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espaço entre os itens */
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  background-color: #ffd700;
+  color: #121212;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #ffc107;
+}
+
+/* Conteúdo Principal */
+.content {
+  margin-top: 150px; /* Dá espaço para o cabeçalho fixo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 150px); /* Ocupa o restante da tela */
+  overflow-y: auto; /* Permite rolagem vertical */
+}
+
+.movie-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Exibição Centralizada */
+.movie-details-container h1 {
+  color: #333;
+}
+
+.movie-details-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.movie-details-container p {
+  margin: 10px 0;
+  color: #555;
+}
+
+/*
+display: flex !important;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+ */

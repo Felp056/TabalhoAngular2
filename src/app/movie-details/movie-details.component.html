@@ -1,0 +1,9 @@
+<div class="movie-container" *ngIf="movie">
+  <h1>{{ movie.Title }}</h1>
+  <img [src]="movie.Poster" alt="Poster do Filme" />
+  <p><strong>Ano:</strong> {{ movie.Year }}</p>
+  <p><strong>Gênero:</strong> {{ movie.Genre }}</p>
+  <p><strong>Diretor:</strong> {{ movie.Director }}</p>
+  <p><strong>Elenco:</strong> {{ movie.Actors }}</p>
+  <p><strong>Sinopse:</strong> {{ movie.Plot }}</p>
+</div>
